@@ -1,1 +1,2 @@
-#Substring: find if a sting is substring
+# Substring
+find if a sting is substring
