@@ -6,3 +6,6 @@ Check if given string is palindrome
 
 # Anagrame
 Check if given two stings are anagrame
+
+# String Reverse
+reverse a string
