@@ -9,7 +9,7 @@ namespace substring
     public class FindSubstring
     {
         /// <summary>
-        /// O(n^2) or O(n x m)
+        /// O(n)
         /// Find if substring
         /// </summary>
         /// <param name="str1">First String in which given substring will be searched</param>
@@ -18,16 +18,16 @@ namespace substring
         internal bool IsSubString(string str1, string str2)
         {
             bool isSubString = false;
-            for (int i = 0; i < str1.Length - 1; i++)
+            for (int i = 0; i < str1.Length; i++)
             {
                 if (str1[i] == str2[0])
                 {
                     bool areSame = true;
-                    for (int j = 1; j < str2.Length - 1; j++)
+                    for (int j = 1; j < str2.Length; j++)
                     {
-                        if (str1[i + j] != str2[j])
+                        if (str1[++i] != str2[j])
                         {
-                            areSame = false;
+                            areSame = false; --i;
                             break;
                         }
                     }
@@ -46,8 +46,8 @@ namespace substring
     {
         static void Main(string[] args)
         {
-            string str1 = "abcdefgh";
-            string str2 = "efg";
+            string str1 = "asldknalndknaksmndkabsnkdaskdbkabskdbkasbdkbaksbdnasndlnasdnlasndknaskndb";
+            string str2 = "kasb";
 
             FindSubstring substring = new FindSubstring();
             bool isSubstring = substring.IsSubString(str1, str2);
