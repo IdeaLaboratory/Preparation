@@ -1,5 +1,3 @@
-package stackMain;
-
 public class Stack {
 	int top;
 	int size;
