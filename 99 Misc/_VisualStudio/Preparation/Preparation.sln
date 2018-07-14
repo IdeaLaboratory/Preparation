@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Preparation", "Preparation\Preparation.csproj", "{7E00BA14-2AF6-41F4-B61C-BCF7284E73EA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Preparation", "Preparation.csproj", "{7E00BA14-2AF6-41F4-B61C-BCF7284E73EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tree", "..\..\07 Tree\C#\Tree.csproj", "{6206F930-9110-468C-9ED4-EA3FB6CF3888}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tree", "..\..\..\07 Tree\C#\Tree.csproj", "{6206F930-9110-468C-9ED4-EA3FB6CF3888}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
