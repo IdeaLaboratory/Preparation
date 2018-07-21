@@ -35,6 +35,11 @@ namespace Tree
             PrintDFSInorder(_root);
         }
 
+        public void BFSWithoutRecursion()
+        {
+            BFSWithoutRecursionInternal(_root);
+        }
+
         public void Edge()
         {
             InternalPrintLeft(_root);
@@ -166,6 +171,30 @@ namespace Tree
                 return;
             Console.WriteLine(root.data);
             InternalPrintLeft(root.left);
+        }
+
+        private void BFSWithoutRecursionInternal(Node root)
+        {
+            if (root == null)
+                return;
+            Queue<Node> nodes = new Queue<Node>();
+            Queue<Node> childNodes = new Queue<Node>();
+            childNodes.Enqueue(root);
+
+            while (childNodes.Count > 0)
+            {
+                Node node = childNodes.Dequeue();
+                if (node.left != null)
+                    childNodes.Enqueue(node.left);
+                if (node.right != null)
+                    childNodes.Enqueue(node.right);
+
+                nodes.Enqueue(node);
+            }
+            foreach (var item in nodes)
+            {
+                Console.WriteLine(item.data);
+            }
         }
 
         #endregion

@@ -23,7 +23,8 @@ namespace Preparation
             //myTree.PrintDFSInorder();
             //myTree.PrintDFSPostOrder();
             //myTree.LeafNode();
-            myTree.Edge();
+            //myTree.Edge();
+            myTree.BFSWithoutRecursion();
         }
     }
 }
