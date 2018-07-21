@@ -2,6 +2,7 @@ package binarySearchTree;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class BinarySearchTree {
 
@@ -9,31 +10,54 @@ public class BinarySearchTree {
 		int data;
 		Node left;
 		Node right;
+		
+		@Override
+		public String toString() {
+			String str= new String(""+data+"");
+			return str;
+		}
 	}
 
 	Node root;
 
-	void insert(int data) {
+	public void insert(int data) {
 		root = insert(data, root);
 	}
 
-	void BFSTraverse() {
+	public void BFSTraverse() {
 		List<Node> childNodes = new ArrayList<>();
 		BFStraverse(root, childNodes);
 	}
 
-	void preOrder() {
+	public void preOrder() {
 		preOrder(root);
 	}
 
-	void postOrder() {
+	public void postOrder() {
 		postOrder(root);
 	}
 
-	void inOrder() {
+	public void inOrder() {
 		inOrder(root);
 	}
 
+	public void printLeafNodes() {
+		List<Node> leafNodes = new ArrayList<>();
+		printLeafNodes(root, leafNodes);
+	}
+
+	public void printEdgeNodes() {
+		printLeftNodes(root);
+		printLeafNodes();
+		printRightNodes(root.right);
+	}
+	
+	public void BFSWithoutRecursion()
+	{
+		BFSWithoutRecursion(root);
+	}
+
+	
 	private Node insert(int data, Node node) {
 		if (node == null) {
 			node = new Node();
@@ -50,7 +74,7 @@ public class BinarySearchTree {
 	private void preOrder(Node node) {
 		if (node == null)
 			return;
-		System.out.print(node.data+"	");
+		System.out.print(node.data + "	");
 		preOrder(node.left);
 		preOrder(node.right);
 	}
@@ -60,37 +84,84 @@ public class BinarySearchTree {
 			return;
 		postOrder(node.left);
 		postOrder(node.right);
-		System.out.print(node.data+"	");
+		System.out.print(node.data + "	");
 	}
 
 	private void inOrder(Node node) {
 		if (node == null)
 			return;
 		inOrder(node.left);
-		System.out.print(node.data+" ");
+		System.out.print(node.data + "	");
 		inOrder(node.right);
 	}
 
-	private void BFStraverse(Node root, List<Node> childNodes) {
-		if (root == null)
+	private void BFStraverse(Node node, List<Node> childNodes) {
+		if (node == null)
 			return;
-		System.out.print(root.data+"	");
-		childNodes.add(root.left);
-		childNodes.add(root.right);
+		System.out.print(node.data + "	");
+		childNodes.add(node.left);
+		childNodes.add(node.right);
 		while (childNodes.size() > 0) {
 			BFStraverse(childNodes.remove(0), childNodes);
 		}
 	}
 
-	void traverse(Node node) {
+	private void printLeafNodes(Node node, List<Node> leafNodes) {
 		if (node == null)
 			return;
-		else {
-			System.out.println(node.data);
-			traverse(node.left);
-			traverse(node.right);
+		if (node.left == null && node.right == null) {
+			System.out.print(node.data + "	");
+		}
+		leafNodes.add(node.left);
+		leafNodes.add(node.right);
+		while (leafNodes.size() > 0) {
+			printLeafNodes(leafNodes.remove(0), leafNodes);
 		}
 	}
+
+	private void printRightNodes(Node node) {
+		if (node == null)
+			return;
+		printRightNodes(node.right);
+		if (node.right != null) {
+			System.out.print(node.data + "	");
+		}
+	}
+
+	private void printLeftNodes(Node node) {
+		if (node == null)
+			return;
+		if (node.left != null) {
+			System.out.print(node.data + "	");
+		}
+		printLeftNodes(node.left);
+	}
+	
+	private void BFSWithoutRecursion(Node node) {
+		List<Node> nodeList= new ArrayList<>();
+		List<Node> childList= new ArrayList<>();
+		childList.add(node);
+		while(childList.size()>0)
+		{
+			//retrieve each element
+			Node n=childList.remove(0);
+			
+			//add element's child if not null
+			if(n.left!=null)
+			{
+				childList.add(n.left);
+			}
+			if(n.right!=null)
+			{
+				childList.add(n.right);
+			}
+			// add element into nodeList
+			nodeList.add(n);
+		}
+		
+		System.out.println(nodeList);
+	}
+
 
 	public static void main(String[] args) {
 		BinarySearchTree obj = new BinarySearchTree();
@@ -101,14 +172,24 @@ public class BinarySearchTree {
 		obj.insert(7);
 		obj.insert(99);
 
-		System.out.println("BFS");
-		obj.BFSTraverse();
-		System.out.println("inOrder");
-		obj.inOrder();
-		System.out.println("preOrder");
-		obj.preOrder();
-		System.out.println("postOrder");
-		obj.postOrder();
+//		System.out.println("BFS");
+//		obj.BFSTraverse();
+//		System.out.println();
+//		System.out.println("inOrder");
+//		obj.inOrder();
+//		System.out.println();
+//		System.out.println("preOrder");
+//		obj.preOrder();
+//		System.out.println();
+//		System.out.println("postOrder");
+//		obj.postOrder();
+//		System.out.println();
+//		System.out.println("leaf nodes");
+//		obj.printLeafNodes();
+//		System.out.println();
+//		System.out.println("edge nodes");
+//		obj.printEdgeNodes();
+		obj.BFSWithoutRecursion();
 
 	}
 }
