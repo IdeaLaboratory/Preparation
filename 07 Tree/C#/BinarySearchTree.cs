@@ -7,42 +7,50 @@ namespace Tree
 {
     public class BinarySearchTree : ITree
     {
-        private Node Root { get; set; }
-        
+        private Node _root;
+
         #region Node inner class
         class Node
         {
             public int data;
             public Node left, right;
-        } 
+        }
         #endregion
 
         #region public methods
 
         public void Insert(int val)
         {
-            Root = InsertInternal(Root, val);
+            _root = InsertInternal(_root, val);
         }
 
         public void PrintBFS()
         {
             Queue<Node> childs = new Queue<Node>();
-            PrintBFS(Root, childs);
+            PrintBFS(_root, childs);
         }
 
         public void PrintDFSInorder()
         {
-            PrintDFSInorder(Root);
+            PrintDFSInorder(_root);
+        }
+
+        public void Edge()
+        {
+            InternalPrintLeft(_root);
+            LeafNode();
+            InternalPrintRight(_root);
+
         }
 
         public void PrintDFSPostOrder()
         {
-            PrintDFSPostOrder(Root);
+            PrintDFSPostOrder(_root);
         }
 
         public void PrintDFSPreorder()
         {
-            PrintDFS(Root);
+            PrintDFS(_root);
         }
 
         public void Remove(int val)
@@ -54,6 +62,13 @@ namespace Tree
         {
             throw new NotImplementedException();
         }
+
+        public void LeafNode()
+        {
+            Queue<Node> childs = new Queue<Node>();
+            LeafNodeInternal(_root, childs);
+        }
+
         #endregion
 
         #region private methods
@@ -117,6 +132,43 @@ namespace Tree
             PrintDFSPostOrder(root.right);
             Console.WriteLine(root.data);
         }
+
+        private void LeafNodeInternal(Node root, Queue<Node> childs)
+        {
+            if (root == null)
+                return;
+            if (root.left == null && root.right == null)
+                Console.WriteLine(root.data);
+
+            childs.Enqueue(root.left);
+            childs.Enqueue(root.right);
+
+            while (childs.Count > 0)
+            {
+                LeafNodeInternal(childs.Dequeue(), childs);
+            }
+        }
+
+        private void InternalPrintRight(Node root)
+        {
+            if (root == null)
+                return;
+            if (root.right == null)  // skip the leaf left
+                return;
+            InternalPrintRight(root.right); //bottom to top
+            Console.WriteLine(root.data);
+        }
+
+        private void InternalPrintLeft(Node root)
+        {
+            if (root == null)
+                return;
+            if (root.left == null)  // skip the leaf left
+                return;
+            Console.WriteLine(root.data);
+            InternalPrintLeft(root.left);
+        }
+
         #endregion
     }
 }

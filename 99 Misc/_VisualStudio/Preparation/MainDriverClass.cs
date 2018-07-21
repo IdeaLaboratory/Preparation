@@ -21,7 +21,9 @@ namespace Preparation
             //myTree.PrintBFS();
             //myTree.PrintDFSPreorder();
             //myTree.PrintDFSInorder();
-            myTree.PrintDFSPostOrder();
+            //myTree.PrintDFSPostOrder();
+            //myTree.LeafNode();
+            myTree.Edge();
         }
     }
 }
