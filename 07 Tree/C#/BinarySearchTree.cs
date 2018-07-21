@@ -39,8 +39,7 @@ namespace Tree
         {
             InternalPrintLeft(_root);
             LeafNode();
-            InternalPrintRight(_root);
-
+            InternalPrintRight(_root.right);    //skip root as already printed
         }
 
         public void PrintDFSPostOrder()
