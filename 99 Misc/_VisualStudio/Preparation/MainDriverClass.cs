@@ -10,7 +10,7 @@ namespace Preparation
     {
         static void Main(string[] args)
         {
-            BinarySearchTree myTree = new BinarySearchTree();
+            BinarySearchTree<int> myTree = new BinarySearchTree<int>();
             myTree.Insert(5);
             myTree.Insert(3);
             myTree.Insert(9);
@@ -20,11 +20,11 @@ namespace Preparation
 
             //myTree.PrintBFS();
             //myTree.PrintDFSPreorder();
-            //myTree.PrintDFSInorder();
+            myTree.PrintDFSInorder();
             //myTree.PrintDFSPostOrder();
             //myTree.LeafNode();
             //myTree.Edge();
-            myTree.BFSWithoutRecursion();
+            //myTree.BFSWithoutRecursion();
         }
     }
 }

@@ -5,10 +5,10 @@ using System.Text;
 
 namespace Tree
 {
-    public interface ITree
+    public interface ITree<T> where T : IComparable<T>
     {
-        void Insert(int val);
-        void Remove(int val);
-        int Search();
+        void Insert(T val);
+        void Remove(T val);
+        T Search();
     }
 }

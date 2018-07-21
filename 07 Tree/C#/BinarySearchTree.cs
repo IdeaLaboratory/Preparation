@@ -5,21 +5,21 @@ using System.Text;
 
 namespace Tree
 {
-    public class BinarySearchTree : ITree
+    public class BinarySearchTree<T> : ITree<T> where T : IComparable<T>
     {
         private Node _root;
 
         #region Node inner class
         class Node
         {
-            public int data;
+            public T data;
             public Node left, right;
         }
         #endregion
 
         #region public methods
 
-        public void Insert(int val)
+        public void Insert(T val)
         {
             _root = InsertInternal(_root, val);
         }
@@ -57,12 +57,12 @@ namespace Tree
             PrintDFS(_root);
         }
 
-        public void Remove(int val)
+        public void Remove(T val)
         {
             throw new NotImplementedException();
         }
 
-        public int Search()
+        public T Search()
         {
             throw new NotImplementedException();
         }
@@ -76,7 +76,7 @@ namespace Tree
         #endregion
 
         #region private methods
-        private Node InsertInternal(Node current, int val)
+        private Node InsertInternal(Node current, T val)
         {
             if (current == null)
             {
@@ -84,8 +84,8 @@ namespace Tree
             }
             else
             {
-                if (val < current.data)
-                    current.left = InsertInternal(current.left, val);
+                if (1 == current.data.CompareTo(val))
+                current.left = InsertInternal(current.left, val);
                 else
                     current.right = InsertInternal(current.right, val);
             }
