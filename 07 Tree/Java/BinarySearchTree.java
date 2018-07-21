@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-public class BinarySearchTree {
+public class BinarySearchTree<T extends Comparable<T>> {
 
 	class Node {
-		int data;
+		T data;
 		Node left;
 		Node right;
 		
@@ -20,7 +20,7 @@ public class BinarySearchTree {
 
 	Node root;
 
-	public void insert(int data) {
+	public void insert(T data) {
 		root = insert(data, root);
 	}
 
@@ -58,14 +58,14 @@ public class BinarySearchTree {
 	}
 
 	
-	private Node insert(int data, Node node) {
+	private Node insert(T data, Node node) {
 		if (node == null) {
 			node = new Node();
 			node.data = data;
 			return node;
-		} else if (data < node.data) {
+		} else if (data.compareTo(node.data)<0) {
 			node.left = insert(data, node.left);
-		} else if (data > node.data) {
+		} else if (data.compareTo(node.data)>0) {
 			node.right = insert(data, node.right);
 		}
 		return node;
@@ -164,7 +164,7 @@ public class BinarySearchTree {
 
 
 	public static void main(String[] args) {
-		BinarySearchTree obj = new BinarySearchTree();
+		BinarySearchTree<Integer> obj = new BinarySearchTree<Integer>();
 		obj.insert(5);
 		obj.insert(3);
 		obj.insert(9);
@@ -172,23 +172,23 @@ public class BinarySearchTree {
 		obj.insert(7);
 		obj.insert(99);
 
-//		System.out.println("BFS");
-//		obj.BFSTraverse();
-//		System.out.println();
-//		System.out.println("inOrder");
-//		obj.inOrder();
-//		System.out.println();
-//		System.out.println("preOrder");
-//		obj.preOrder();
-//		System.out.println();
-//		System.out.println("postOrder");
-//		obj.postOrder();
-//		System.out.println();
-//		System.out.println("leaf nodes");
-//		obj.printLeafNodes();
-//		System.out.println();
-//		System.out.println("edge nodes");
-//		obj.printEdgeNodes();
+		System.out.println("BFS");
+		obj.BFSTraverse();
+		System.out.println();
+		System.out.println("inOrder");
+		obj.inOrder();
+		System.out.println();
+		System.out.println("preOrder");
+		obj.preOrder();
+		System.out.println();
+		System.out.println("postOrder");
+		obj.postOrder();
+		System.out.println();
+		System.out.println("leaf nodes");
+		obj.printLeafNodes();
+		System.out.println();
+		System.out.println("edge nodes");
+		obj.printEdgeNodes();
 		obj.BFSWithoutRecursion();
 
 	}
