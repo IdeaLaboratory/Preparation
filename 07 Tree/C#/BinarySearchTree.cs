@@ -8,11 +8,14 @@ namespace Tree
     public class BinarySearchTree : ITree
     {
         private Node Root { get; set; }
+        
+        #region Node inner class
         class Node
         {
             public int data;
             public Node left, right;
-        }
+        } 
+        #endregion
 
         #region public methods
 
