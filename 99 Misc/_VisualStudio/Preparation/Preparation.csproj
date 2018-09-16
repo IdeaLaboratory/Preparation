@@ -42,9 +42,9 @@
     <Compile Include="MainDriverClass.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\07 Tree\C#\Tree.csproj">
-      <Project>{6206f930-9110-468c-9ed4-ea3fb6cf3888}</Project>
-      <Name>Tree</Name>
+    <ProjectReference Include="..\..\..\13 Dynamic\DynamicProgramming.csproj">
+      <Project>{1f238ba6-e076-4569-bf44-9ff1b738e61d}</Project>
+      <Name>DynamicProgramming</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

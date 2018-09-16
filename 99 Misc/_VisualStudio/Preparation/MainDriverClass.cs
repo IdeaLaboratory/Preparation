@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Tree;
+﻿using DP;
+using System;
+using System.Diagnostics;
 
 namespace Preparation
 {
@@ -10,17 +8,32 @@ namespace Preparation
     {
         static void Main(string[] args)
         {
-            BinarySearchTree<int> myTree = new BinarySearchTree<int>();
-            myTree.Insert(5);
-            myTree.Insert(3);
-            myTree.Insert(9);
-            myTree.Insert(7);
-            myTree.Insert(99);
-            myTree.Insert(1);
+            Fibonacci f = new Fibonacci();
 
-            //myTree.PrintBFS();
-            //myTree.PrintDFSPreorder();
-            myTree.PrintDFSInorder();
+            var sw = Stopwatch.StartNew();
+            //var series = f.GetFibonacci(44);
+            //sw.Stop();
+            //Console.Write(series + ", ");
+            //Console.WriteLine("==========Elapsed time=========");
+            //Console.WriteLine(sw.Elapsed);
+
+            sw = Stopwatch.StartNew();
+            var series1 = f.GetFibonacciWithDPWithoutDictionary(50);
+            sw.Stop();
+            Console.Write(series1 + ", ");
+            Console.WriteLine("==========Elapsed time=========");
+            Console.WriteLine(sw.Elapsed);
+            //BinarySearchTree<int> myTree = new BinarySearchTree<int>();
+            //myTree.Insert(5);
+            //myTree.Insert(3);
+            //myTree.Insert(9);
+            //myTree.Insert(7);
+            //myTree.Insert(99);
+            //myTree.Insert(1);
+
+            ////myTree.PrintBFS();
+            ////myTree.PrintDFSPreorder();
+            //myTree.PrintDFSInorder();
             //myTree.PrintDFSPostOrder();
             //myTree.LeafNode();
             //myTree.Edge();
