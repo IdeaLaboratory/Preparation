@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Preparation", "Preparation\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tree", "..\..\07 Tree\C#\Tree.csproj", "{6206F930-9110-468C-9ED4-EA3FB6CF3888}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicProgramming", "..\..\13 Dynamic\DynamicProgramming.csproj", "{1F238BA6-E076-4569-BF44-9FF1B738E61D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicProgramming", "..\..\13 Dynamic\C#\DynamicProgramming.csproj", "{1F238BA6-E076-4569-BF44-9FF1B738E61D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
