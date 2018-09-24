@@ -18,7 +18,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
-    <OutputPath>..\Binaries\bin\Debug</OutputPath>
+    <OutputPath>..\..\Binaries\bin\Debug\</OutputPath>
     <BaseIntermediateOutputPath>..\Binaries\obj\</BaseIntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">

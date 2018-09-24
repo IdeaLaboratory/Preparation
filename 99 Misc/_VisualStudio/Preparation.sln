@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tree", "..\..\07 Tree\C#\Tr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicProgramming", "..\..\13 Dynamic\C#\DynamicProgramming.csproj", "{1F238BA6-E076-4569-BF44-9FF1B738E61D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backtrack", "..\..\14 Backtrack\C#\Backtrack.csproj", "{7183B0E6-3562-4898-ABD5-6775172815B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1F238BA6-E076-4569-BF44-9FF1B738E61D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F238BA6-E076-4569-BF44-9FF1B738E61D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F238BA6-E076-4569-BF44-9FF1B738E61D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7183B0E6-3562-4898-ABD5-6775172815B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7183B0E6-3562-4898-ABD5-6775172815B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7183B0E6-3562-4898-ABD5-6775172815B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7183B0E6-3562-4898-ABD5-6775172815B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
