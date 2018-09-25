@@ -11,11 +11,25 @@ namespace Preparation
             Fibonacci f = new Fibonacci();
             var sw = Stopwatch.StartNew();
             sw = Stopwatch.StartNew();
-            var series1 = f.GetFibonacciWithDPWithoutDictionary(50);
+            ////////////Write your code here to measure performance////////////
+            Backtrack.NQueen nQueen = new Backtrack.NQueen();
+            int n = 16;
+            int[,] positions = new int[n, n];
+            nQueen.GetQueenPositions(positions, 0);
+
+            for (int i = 0; i < positions.GetLength(0); i++)
+            {
+                for (int j = 0; j < positions.GetLength(0); j++)
+                {
+                    Console.Write(positions[i, j] + ",");
+                }
+                Console.WriteLine();
+            }
+            ////////////////////////
             sw.Stop();
-            Console.Write(series1 + ", ");
             Console.WriteLine("==========Elapsed time=========");
             Console.WriteLine(sw.Elapsed);
+            Console.Read();
 
             //var series = f.GetFibonacci(44);
             //sw.Stop();

@@ -46,6 +46,10 @@
       <Project>{1f238ba6-e076-4569-bf44-9ff1b738e61d}</Project>
       <Name>DynamicProgramming</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\14 Backtrack\C#\Backtrack.csproj">
+      <Project>{7183b0e6-3562-4898-abd5-6775172815b1}</Project>
+      <Name>Backtrack</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
