@@ -32,7 +32,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <RootNamespace>DynamicProgramming</RootNamespace>
+    <RootNamespace>DP</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Fibonacci.cs" />
+    <Compile Include="LCS.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
   <ProjectExtensions>

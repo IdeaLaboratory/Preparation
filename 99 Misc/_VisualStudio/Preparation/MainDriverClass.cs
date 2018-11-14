@@ -8,23 +8,39 @@ namespace Preparation
     {
         static void Main(string[] args)
         {
+            Tree.Trie trie = new Tree.Trie();
+            trie.Insert("adi");
+            bool found = trie.Search("ad");
+
             Fibonacci f = new Fibonacci();
             var sw = Stopwatch.StartNew();
             sw = Stopwatch.StartNew();
             ////////////Write your code here to measure performance////////////
-            Backtrack.NQueen nQueen = new Backtrack.NQueen();
-            int n = 16;
-            int[,] positions = new int[n, n];
-            nQueen.GetQueenPositions(positions, 0);
+            //Backtrack.NQueen nQueen = new Backtrack.NQueen();
+            //int n = 16;
+            //int[,] positions = new int[n, n];
+            //nQueen.GetQueenPositions(positions, 0);
 
-            for (int i = 0; i < positions.GetLength(0); i++)
-            {
-                for (int j = 0; j < positions.GetLength(0); j++)
-                {
-                    Console.Write(positions[i, j] + ",");
-                }
-                Console.WriteLine();
-            }
+            //for (int i = 0; i < positions.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < positions.GetLength(0); j++)
+            //    {
+            //        Console.Write(positions[i, j] + ",");
+            //    }
+            //    Console.WriteLine();
+            //}
+
+            String s1 = "AGCAT";
+            String s2 = "GACXXA";
+
+            char[] X = s1.ToCharArray();
+            char[] Y = s2.ToCharArray();
+            int m = X.Length;
+            int n = Y.Length;
+
+            Console.Write("Length of LCS is" + " "
+                          + GFG.lcs(X, Y, m, n));
+
             ////////////////////////
             sw.Stop();
             Console.WriteLine("==========Elapsed time=========");
