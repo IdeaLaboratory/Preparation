@@ -9,8 +9,25 @@ namespace Preparation
         static void Main(string[] args)
         {
             Tree.Trie trie = new Tree.Trie();
-            trie.Insert("adi");
-            bool found = trie.Search("ad");
+            trie.Insert("hel");
+            trie.Insert("helaate");
+            trie.Insert("help");
+            trie.Insert("hell");
+            trie.Insert("hello");
+            trie.Insert("helps");
+            trie.Insert("has");
+            trie.Insert("hes");
+
+            var list = trie.Suggestions("hel");
+
+            foreach (var item in list)
+            {
+                Console.WriteLine(item);
+
+            }
+
+            Console.WriteLine();
+            Console.WriteLine();
 
             Fibonacci f = new Fibonacci();
             var sw = Stopwatch.StartNew();

@@ -1,4 +1,6 @@
-﻿namespace Tree
+﻿using System.Collections.Generic;
+
+namespace Tree
 {
     /// <summary>
     /// Trie is an efficient information reTRIEval data structure
@@ -69,6 +71,57 @@
             }
             return temp.isWord;
 
+        }
+
+        public List<string> Suggestions(string key)
+        {
+            List<string> suggestions = new List<string>();
+
+            //reach till last character if available
+            TrieNode temp = root;
+            for (int i = 0; i < key.Length; i++)
+            {
+                TrieNode child = temp.children[key[i] - 'a'];
+                if (child == null)
+                {
+                    return suggestions;
+                }
+
+                temp = child;
+            } // temp is the last character of key in the trie
+
+            
+            SuggestionsUtil(temp, key, suggestions);
+
+            return suggestions;
+        }
+
+        private void SuggestionsUtil(TrieNode root, string key, List<string> list)
+        {
+            if (IsLastChild(root))
+            {
+                return;
+            }
+
+            for (int i = 0; i < root.children.Length; i++)
+            {
+                TrieNode child = root.children[i];
+                if (child != null && child.isWord)
+                {
+                    char temp = (char)('a' + i);
+                    list.Add(key + temp);
+                    SuggestionsUtil(child, key + temp, list);
+                }
+            }
+        }
+
+        private bool IsLastChild(TrieNode root)
+        {
+            foreach (TrieNode child in root.children)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }
