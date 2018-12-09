@@ -106,10 +106,14 @@ namespace Tree
             for (int i = 0; i < root.children.Length; i++)
             {
                 TrieNode child = root.children[i];
-                if (child != null && child.isWord)
+                if (child != null)
                 {
-                    char temp = (char)('a' + i);
-                    list.Add(key + temp);
+                    char temp = char.MinValue;
+                    if (child.isWord)
+                    {
+                         temp = (char)('a' + i);
+                        list.Add(key + temp);
+                    }
                     SuggestionsUtil(child, key + temp, list);
                 }
             }
