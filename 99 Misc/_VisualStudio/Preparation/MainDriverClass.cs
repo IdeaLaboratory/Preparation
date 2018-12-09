@@ -1,6 +1,7 @@
 ﻿using DP;
 using System;
 using System.Diagnostics;
+using Strings;
 
 namespace Preparation
 {
@@ -8,6 +9,11 @@ namespace Preparation
     {
         static void Main(string[] args)
         {
+            GroupOccurrencesCharacters obj = new GroupOccurrencesCharacters();
+            var newString = obj.GroupOccChar("abcac");
+            Console.WriteLine(newString);
+
+
             Tree.Trie trie = new Tree.Trie();
             trie.Insert("hel");
             trie.Insert("helaate");
