@@ -25,5 +25,24 @@ namespace Etc
 
             return false;
         }
+
+        private bool ValidYear()
+        {
+            if (YYYY < 1900 || YYYY > 2100)
+                return false;
+            return true;
+        }
+
+        private bool ValidMonth()
+        {
+            if (MM < 1 || MM > 12)
+                return false;
+            return true;
+        }
+
+        private bool ValidDate()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
