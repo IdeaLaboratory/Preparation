@@ -18,36 +18,21 @@ namespace Etc
 
         public bool IsValid()
         {
-            if (ValidDate()
-                && ValidMonth()
-                && ValidYear())
+            if (ValidUtil(DD, 1, getMaxDay(MM, YYYY))
+                && ValidUtil(MM, 1, 12)
+                && ValidUtil(YYYY, 1900, 2100))
                 return true;
 
             return false;
         }
 
-        private bool ValidYear()
+        private bool ValidUtil(int YYYY, int min, int max)
         {
-            if (YYYY < 1900 || YYYY > 2100)
+            if (YYYY < min || YYYY > max)
                 return false;
             return true;
         }
-
-        private bool ValidMonth()
-        {
-            if (MM < 1 || MM > 12)
-                return false;
-            return true;
-        }
-
-        private bool ValidDate()
-        {
-            int maxDay = getMaxDay(MM, YYYY);
-            if (DD < 1 || DD > maxDay)
-                return false;
-            return true;
-        }
-
+        
         private int getMaxDay(int mM, int yYYY)
         {
             int isLeapyear = IsLeapyear(YYYY);
