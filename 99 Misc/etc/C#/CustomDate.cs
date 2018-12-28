@@ -42,6 +42,14 @@ namespace Etc
 
         private bool ValidDate()
         {
+            int maxDay = getMaxDay(MM, YYYY);
+            if (MM < 1 || MM > maxDay)
+                return false;
+            return true;
+        }
+
+        private int getMaxDay(int mM, int yYYY)
+        {
             throw new NotImplementedException();
         }
     }
