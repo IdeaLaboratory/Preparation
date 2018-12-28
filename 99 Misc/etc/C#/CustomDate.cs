@@ -18,6 +18,11 @@ namespace Etc
 
         public bool IsValid()
         {
+            if (ValidDate()
+                && ValidMonth()
+                && ValidYear())
+                return true;
+
             return false;
         }
     }
