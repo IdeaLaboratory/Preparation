@@ -50,6 +50,30 @@ namespace Etc
 
         private int getMaxDay(int mM, int yYYY)
         {
+            int isLeapyear = IsLeapyear(YYYY);
+            switch (mM)
+            {
+                case 2:
+                    return 28 + isLeapyear;
+
+                case 9:
+                case 4:
+                case 6:
+                case 11:
+                    return 30;
+
+                default:
+                    return 31;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="yYYY"></param>
+        /// <returns>0 or 1</returns>
+        private int IsLeapyear(int yYYY)
+        {
             throw new NotImplementedException();
         }
     }
