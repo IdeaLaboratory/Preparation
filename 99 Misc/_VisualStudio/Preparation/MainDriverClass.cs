@@ -2,6 +2,7 @@
 using System;
 using System.Diagnostics;
 using Strings;
+using Etc;
 
 namespace Preparation
 {
@@ -9,6 +10,19 @@ namespace Preparation
     {
         static void Main(string[] args)
         {
+            //CustomDate check
+
+            CustomDate date = new CustomDate(29, 2, 2016);
+            Console.WriteLine(date.IsValid());
+            CustomDate date1 = new CustomDate(29, 2, 2017);
+            Console.WriteLine(date1.IsValid());
+            CustomDate date2 = new CustomDate(29, 21, 2016);
+            Console.WriteLine(date2.IsValid());
+            CustomDate date3 = new CustomDate(29, 2, 3016);
+            Console.WriteLine(date3.IsValid());
+            CustomDate date4 = new CustomDate(33, 2, 2016);
+            Console.WriteLine(date4.IsValid());
+
             GroupOccurrencesCharacters obj = new GroupOccurrencesCharacters();
             var newString = obj.GroupOccChar("abcac");
             Console.WriteLine(newString);

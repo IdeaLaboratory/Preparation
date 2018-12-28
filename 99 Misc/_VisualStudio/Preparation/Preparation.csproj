@@ -76,6 +76,10 @@
       <Project>{7183b0e6-3562-4898-abd5-6775172815b1}</Project>
       <Name>Backtrack</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\etc\C#\etc.csproj">
+      <Project>{ad62daef-e5f8-4662-9d42-3f6e3d6a8948}</Project>
+      <Name>etc</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

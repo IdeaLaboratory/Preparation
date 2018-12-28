@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Etc
 {
-    class CustomDate
+    public class CustomDate
     {
         public int DD { get; set; }
         public int MM { get; set; }
@@ -43,7 +43,7 @@ namespace Etc
         private bool ValidDate()
         {
             int maxDay = getMaxDay(MM, YYYY);
-            if (MM < 1 || MM > maxDay)
+            if (DD < 1 || DD > maxDay)
                 return false;
             return true;
         }
