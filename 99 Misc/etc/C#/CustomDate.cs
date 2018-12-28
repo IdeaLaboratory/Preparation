@@ -74,7 +74,9 @@ namespace Etc
         /// <returns>0 or 1</returns>
         private int IsLeapyear(int yYYY)
         {
-            throw new NotImplementedException();
+            if (yYYY % 4 == 0)
+                return 1;
+            return 0;
         }
     }
 }
