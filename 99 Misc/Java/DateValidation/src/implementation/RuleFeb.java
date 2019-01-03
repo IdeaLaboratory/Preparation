@@ -8,7 +8,11 @@ public class RuleFeb implements Rules{
 	@Override
 	public boolean isValid(Date date) {
 		// TODO Auto-generated method stub
+<<<<<<< HEAD
 		if(isLeapYear(date.getYy()))
+=======
+		if(Date.isLeapYear(date.getYy()))
+>>>>>>> 4c1c0e1ed4fba56e9f82ec2cda6428fd5987c17c
 		{
 			if(date.getDd()<=29)
 				return true;
@@ -20,6 +24,7 @@ public class RuleFeb implements Rules{
 		}
 		return false;
 	}
+<<<<<<< HEAD
 	
 	boolean isLeapYear(int year) {
 		// TODO Auto-generated method stub
@@ -28,6 +33,8 @@ public class RuleFeb implements Rules{
 		}
 		return false;
 	}
+=======
+>>>>>>> 4c1c0e1ed4fba56e9f82ec2cda6428fd5987c17c
 
 
 }
