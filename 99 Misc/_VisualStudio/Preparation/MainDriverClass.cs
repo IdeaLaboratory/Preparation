@@ -13,6 +13,7 @@ namespace Preparation
             // find max power
             MaxPower mxPow = new MaxPower();
             Console.WriteLine(mxPow.FindMaxPower(75));
+            Console.WriteLine(mxPow.FindMaxPower(625));
 
             //CustomDate check
 
