@@ -14,7 +14,7 @@ namespace Etc
 
             GetAllFactors(val, divisorArr);
 
-            int max = -1;
+            int max = 1;
             for (int i = 0; i <= sqrtVal; i++)
             {
                 if (divisorArr[i] > max)
@@ -42,7 +42,7 @@ namespace Etc
                     break;
                 }
             }
-            if (!hasDivided)
+            if (!hasDivided && tempVal <= divisorArr.Length)
                 divisorArr[tempVal] += 1;
         }
     }
