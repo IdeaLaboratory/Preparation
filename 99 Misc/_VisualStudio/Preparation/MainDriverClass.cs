@@ -10,6 +10,10 @@ namespace Preparation
     {
         static void Main(string[] args)
         {
+            // find max power
+            MaxPower mxPow = new MaxPower();
+            Console.WriteLine(mxPow.FindMaxPower(75));
+
             //CustomDate check
 
             CustomDate date = new CustomDate(29, 2, 2016);
