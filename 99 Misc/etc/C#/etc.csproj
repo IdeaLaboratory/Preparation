@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="CustomDate.cs" />
     <Compile Include="MaxPower.cs" />
+    <Compile Include="Probability.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
   <ProjectExtensions>
