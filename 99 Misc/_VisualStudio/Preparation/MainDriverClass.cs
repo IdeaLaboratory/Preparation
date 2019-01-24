@@ -1,7 +1,10 @@
-﻿using Etc;
+﻿using DP;
 using System;
-using System.IO;
+using System.Diagnostics;
+using Strings;
+using Etc;
 using System.Text;
+using System.IO;
 
 namespace Preparation
 {
@@ -9,20 +12,17 @@ namespace Preparation
     {
         static void Main(string[] args)
         {
-            for (int j = 0; j < 100; j++)
-            {
-                var csv = new StringBuilder();
-                Probability p = new Probability();
+            var csv = new StringBuilder();
+            Probability p = new Probability();
 
-                for (int i = 0; i < 9000; i++)
-                {
-                    Console.WriteLine();
-                    //Suggestion made by KyleMit
-                    csv.AppendLine(p.GetRandomNumberInRange(0, 99, 80, 99, 0.04).ToString());
-                }
-                File.WriteAllText(@"C:\del\t.csv", csv.ToString());
+            for (int i = 0; i < 1000000; i++)
+            {
+                Console.WriteLine();
+                //Suggestion made by KyleMit
+                csv.AppendLine(p.GetRandomNumberInRange(0, 99, 80,99, 0.04).ToString());
             }
             //after your loop
+            File.WriteAllText(@"C:\del\t.csv", csv.ToString());
 
             //// find max power
             //MaxPower mxPow = new MaxPower();
