@@ -12,6 +12,9 @@ namespace Preparation
     {
         static void Main(string[] args)
         {
+            Arithmetic al = new Arithmetic();
+            Console.WriteLine(al.GetHighestIncreasingNumber(121));
+
             var csv = new StringBuilder();
             Probability p = new Probability();
 
