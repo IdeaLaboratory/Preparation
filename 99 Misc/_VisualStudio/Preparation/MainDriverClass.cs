@@ -12,20 +12,20 @@ namespace Preparation
     {
         static void Main(string[] args)
         {
-            Arithmetic al = new Arithmetic();
-            Console.WriteLine(al.GetHighestIncreasingNumber(121));
+            //Arithmetic al = new Arithmetic();
+            //Console.WriteLine(al.GetHighestIncreasingNumber(121));
 
-            var csv = new StringBuilder();
-            Probability p = new Probability();
+            //var csv = new StringBuilder();
+            //Probability p = new Probability();
 
-            for (int i = 0; i < 1000000; i++)
-            {
-                Console.WriteLine();
-                //Suggestion made by KyleMit
-                csv.AppendLine(p.GetRandomNumberInRange(0, 99, 80,99, 0.04).ToString());
-            }
-            //after your loop
-            File.WriteAllText(@"C:\del\t.csv", csv.ToString());
+            //for (int i = 0; i < 1000000; i++)
+            //{
+            //    Console.WriteLine();
+            //    //Suggestion made by KyleMit
+            //    csv.AppendLine(p.GetRandomNumberInRange(0, 99, 80,99, 0.04).ToString());
+            //}
+            ////after your loop
+            //File.WriteAllText(@"C:\del\t.csv", csv.ToString());
 
             //// find max power
             //MaxPower mxPow = new MaxPower();
@@ -75,10 +75,10 @@ namespace Preparation
             //var sw = Stopwatch.StartNew();
             //sw = Stopwatch.StartNew();
             //////////////Write your code here to measure performance////////////
-            ////Backtrack.NQueen nQueen = new Backtrack.NQueen();
-            ////int n = 16;
-            ////int[,] positions = new int[n, n];
-            ////nQueen.GetQueenPositions(positions, 0);
+            Backtrack.NQueen nQueen = new Backtrack.NQueen();
+            int n = 4;
+            int[,] positions = new int[n, n];
+            nQueen.GetQueenPositions(positions, 0);
 
             ////for (int i = 0; i < positions.GetLength(0); i++)
             ////{
