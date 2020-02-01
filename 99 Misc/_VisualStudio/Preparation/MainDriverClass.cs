@@ -72,8 +72,7 @@ namespace Preparation
             //Console.WriteLine();
             //Console.WriteLine();
 
-            //Fibonacci f = new Fibonacci();
-            //var sw = Stopwatch.StartNew();
+            var sw = Stopwatch.StartNew();
             //sw = Stopwatch.StartNew();
             //////////////Write your code here to measure performance////////////
             //Backtrack.NQueen nQueen = new Backtrack.NQueen();
@@ -99,7 +98,7 @@ namespace Preparation
             //int n = Y.Length;
 
             //Console.Write("Length of LCS is" + " "
-            //              + GFG.lcs(X, Y, m, n));
+            //              + LongestCommonSubsequence.FindLongestCommonSubsequence(X, Y, m, n));
 
             //////////////////////////
             //sw.Stop();
@@ -107,7 +106,29 @@ namespace Preparation
             //Console.WriteLine(sw.Elapsed);
             //Console.Read();
 
-            //var series = f.GetFibonacci(44);
+            Fibonacci f = new Fibonacci();
+            var series = f.GetFibonacci(5);
+
+            sw = Stopwatch.StartNew();
+            for (int i = 0; i < 44; i++)
+            {
+                Console.WriteLine("Fib of {0} is {1}",i, f.GetFibonacci(i));
+            }
+            sw.Stop();
+            Console.WriteLine("==========Elapsed time========= \n GetFibonacci without DP");
+            Console.WriteLine(sw.Elapsed);
+            Console.WriteLine();
+
+            sw = Stopwatch.StartNew();
+            for (int i = 0; i < 44; i++)
+            {
+                Console.WriteLine("Fib of {0} is {1}", i, f.GetFibonacciwithDP(i));
+            }
+            sw.Stop();
+            Console.WriteLine("==========Elapsed time========= \n GetFibonacciwithDP");
+            Console.WriteLine(sw.Elapsed);
+            Console.WriteLine();
+
             //sw.Stop();
             //Console.Write(series + ", ");
             //Console.WriteLine("==========Elapsed time=========");

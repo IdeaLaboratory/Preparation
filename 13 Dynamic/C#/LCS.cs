@@ -9,21 +9,21 @@ namespace DP
     /* C#  Naive recursive implementation of LCS problem */
     using System;
 
-    public class GFG
+    public class LongestCommonSubsequence
     {
-        /* Returns length of LCS for X[0..m-1], Y[0..n-1] */
-        public static int lcs(char[] X, char[] Y, int m, int n)
+        /* Returns length of LCS for X[0..length1-1], inputString2[0..n-1] */
+        public static int FindLongestCommonSubsequence(char[] inputString1, char[] inputString2, int length1, int length2)
         {
-            if (m == 0 || n == 0)
+            if (length1 == 0 || length2 == 0)
                 return 0;
-            if (X[m - 1] == Y[n - 1])
-                return 1 + lcs(X, Y, m - 1, n - 1);
+            if (inputString1[length1 - 1] == inputString2[length2 - 1])
+                return 1 + FindLongestCommonSubsequence(inputString1, inputString2, length1 - 1, length2 - 1);
             else
-                return max(lcs(X, Y, m, n - 1), lcs(X, Y, m - 1, n));
+                return GetMax(FindLongestCommonSubsequence(inputString1, inputString2, length1, length2 - 1), FindLongestCommonSubsequence(inputString1, inputString2, length1 - 1, length2));
         }
 
         /* Utility function to get max of 2 integers */
-        public static int max(int a, int b)
+        public static int GetMax(int a, int b)
         {
             return (a > b) ? a : b;
         }

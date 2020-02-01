@@ -5,7 +5,11 @@ namespace DP
     public class Fibonacci
     {
         /// <summary>
-        /// Get Fibonacci number of n th element using recursion
+        /// Get Fibonacci number of n th element using recursion(no DP)
+        /// 0th element is 1
+        /// 1st element is 1
+        /// 2nd element is 2
+        /// so on..
         /// </summary>
         /// <param name="n">n th element</param>
         /// <returns></returns>
