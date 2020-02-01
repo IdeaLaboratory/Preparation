@@ -13,42 +13,32 @@ namespace Preparation
     {
         static void Main(string[] args)
         {
-            //Arithmetic al = new Arithmetic();
-            //Console.WriteLine(al.GetHighestIncreasingNumber(121));
+            Stopwatch sw;
+            Arithmetic al = new Arithmetic();
+            Console.WriteLine("GetHighestIncreasingNumber");
+            Console.WriteLine(al.GetHighestIncreasingNumber(122));
+            Console.WriteLine();
 
-            //var csv = new StringBuilder();
-            //Probability p = new Probability();
+            // find max power
+            MaxPower mxPow = new MaxPower();
+            Console.WriteLine(mxPow.FindMaxOccuranceOfFactors(250));
 
-            //for (int i = 0; i < 1000000; i++)
-            //{
-            //    Console.WriteLine();
-            //    //Suggestion made by KyleMit
-            //    csv.AppendLine(p.GetRandomNumberInRange(0, 99, 80,99, 0.04).ToString());
-            //}
-            ////after your loop
-            //File.WriteAllText(@"C:\del\t.csv", csv.ToString());
+            //CustomDate check
 
-            //// find max power
-            //MaxPower mxPow = new MaxPower();
-            //Console.WriteLine(mxPow.FindMaxPower(75));
-            //Console.WriteLine(mxPow.FindMaxPower(617));
+            CustomDate date = new CustomDate(29, 2, 2016);
+            Console.WriteLine(date.IsValid());
+            CustomDate date1 = new CustomDate(29, 2, 2017);
+            Console.WriteLine(date1.IsValid());
+            CustomDate date2 = new CustomDate(29, 21, 2016);
+            Console.WriteLine(date2.IsValid());
+            CustomDate date3 = new CustomDate(29, 2, 3016);
+            Console.WriteLine(date3.IsValid());
+            CustomDate date4 = new CustomDate(33, 2, 2016);
+            Console.WriteLine(date4.IsValid());
 
-            ////CustomDate check
-
-            //CustomDate date = new CustomDate(29, 2, 2016);
-            //Console.WriteLine(date.IsValid());
-            //CustomDate date1 = new CustomDate(29, 2, 2017);
-            //Console.WriteLine(date1.IsValid());
-            //CustomDate date2 = new CustomDate(29, 21, 2016);
-            //Console.WriteLine(date2.IsValid());
-            //CustomDate date3 = new CustomDate(29, 2, 3016);
-            //Console.WriteLine(date3.IsValid());
-            //CustomDate date4 = new CustomDate(33, 2, 2016);
-            //Console.WriteLine(date4.IsValid());
-
-            //GroupOccurrencesCharacters obj = new GroupOccurrencesCharacters();
-            //var newString = obj.GroupOccChar("abcac");
-            //Console.WriteLine(newString);
+            GroupOccurrencesCharacters obj = new GroupOccurrencesCharacters();
+            var newString = obj.GroupOccChar("abczabac");
+            Console.WriteLine(newString);
 
 
             //Tree.Trie trie = new Tree.Trie();
@@ -72,7 +62,6 @@ namespace Preparation
             //Console.WriteLine();
             //Console.WriteLine();
 
-            var sw = Stopwatch.StartNew();
             //sw = Stopwatch.StartNew();
             //////////////Write your code here to measure performance////////////
             //Backtrack.NQueen nQueen = new Backtrack.NQueen();
@@ -89,17 +78,19 @@ namespace Preparation
             ////    Console.WriteLine();
             ////}
 
-            //String s1 = "AGCAT";
-            //String s2 = "GACXXA";
+            String s1 = "abcd";
+            String s2 = "xxabcWdt";
 
-            //char[] X = s1.ToCharArray();
-            //char[] Y = s2.ToCharArray();
-            //int m = X.Length;
-            //int n = Y.Length;
+            char[] X = s1.ToCharArray();
+            char[] Y = s2.ToCharArray();
+            int m = X.Length;
+            int n = Y.Length;
 
-            //Console.Write("Length of LCS is" + " "
-            //              + LongestCommonSubsequence.FindLongestCommonSubsequence(X, Y, m, n));
-
+            Console.Write("Length of LCS is" + " "
+                          + LongestCommonSubsequence.FindLongestCommonSubsequence(X, Y, m, n));
+            
+            Console.WriteLine();
+            Console.WriteLine();
             //////////////////////////
             //sw.Stop();
             //Console.WriteLine("==========Elapsed time=========");
@@ -110,9 +101,9 @@ namespace Preparation
             var series = f.GetFibonacci(5);
 
             sw = Stopwatch.StartNew();
-            for (int i = 0; i < 44; i++)
+            for (int i = 0; i < 40; i++)
             {
-                Console.WriteLine("Fib of {0} is {1}",i, f.GetFibonacci(i));
+                Console.WriteLine("Fib of {0}th number is {1}",i, f.GetFibonacci(i));
             }
             sw.Stop();
             Console.WriteLine("==========Elapsed time========= \n GetFibonacci without DP");
@@ -120,7 +111,7 @@ namespace Preparation
             Console.WriteLine();
 
             sw = Stopwatch.StartNew();
-            for (int i = 0; i < 44; i++)
+            for (int i = 0; i < 40; i++)
             {
                 Console.WriteLine("Fib of {0} is {1}", i, f.GetFibonacciwithDP(i));
             }
@@ -129,10 +120,6 @@ namespace Preparation
             Console.WriteLine(sw.Elapsed);
             Console.WriteLine();
 
-            //sw.Stop();
-            //Console.Write(series + ", ");
-            //Console.WriteLine("==========Elapsed time=========");
-            //Console.WriteLine(sw.Elapsed);
             BinarySearchTree<int> myTree = new BinarySearchTree<int>();
             myTree.Insert(5);
             myTree.Insert(3);
@@ -141,10 +128,18 @@ namespace Preparation
             myTree.Insert(99);
             myTree.Insert(1);
 
-            //myTree.PrintBFS();
-            //myTree.PrintDFSPreorder();
+            Console.WriteLine("PrintBFS");
+            myTree.PrintBFS();
+
+            Console.WriteLine("PrintDFSPreorder");
+            myTree.PrintDFSPreorder();
+
+            Console.WriteLine("Remove");
             myTree.Remove(99);
+
+            Console.WriteLine("PrintDFSInorder");
             myTree.PrintDFSInorder();
+
             myTree.PrintDFSPostOrder();
             myTree.LeafNode();
             myTree.Edge();

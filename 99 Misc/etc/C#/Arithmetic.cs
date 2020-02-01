@@ -13,31 +13,28 @@ namespace Etc
         {
             int result = 0;
 
-            //solution 1
+            //Iteration from max
+            //Complexity best case O(1) worst case O(n) technically
             for (int i = limit; i > 0; i--)
             {
                 if (IsIncreasingSequence(i))
                     return i;
             }
 
-            //solution 2
-            /*List<int> digits = new List<int>();
-            BreakIntoDigits(limit, digits);
-
-            for (int j = 0; j < digits.Count; j++)
-            {
-                // ToDO: Start considering from most significant digit and see if it povides highest increasing number.
-                // Otehrwise fall back and try with different value.
-            }*/
-            
             return result;
         }
 
+        #region private methods
+
+        /// <summary>
+        /// Complexity O(log10 n)
+        /// </summary>
+        /// <param name="i"></param>
+        /// <returns></returns>
         private bool IsIncreasingSequence(int i)
         {
-            List<int> digits = new List<int>();
-            BreakIntoDigits(i, digits);
-            int oldValue=0;
+            var digits = BreakIntoDigits(i);
+            int oldValue = 0;
             foreach (int item in digits)
             {
                 if (oldValue > item)
@@ -53,8 +50,9 @@ namespace Etc
         /// </summary>
         /// <param name="limit"></param>
         /// <param name="digits"></param>
-        private void BreakIntoDigits(int limit, List<int> digits)
+        private List<int> BreakIntoDigits(int limit)
         {
+            var digits = new List<int>();
             int temp = limit;
             while (temp > 0)
             {
@@ -62,6 +60,8 @@ namespace Etc
                 temp = temp / 10;
             }
             digits.Reverse();
-        }
+            return digits;
+        } 
+        #endregion
     }
 }

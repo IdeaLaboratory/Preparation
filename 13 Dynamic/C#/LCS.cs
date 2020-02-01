@@ -19,7 +19,8 @@ namespace DP
             if (inputString1[length1 - 1] == inputString2[length2 - 1])
                 return 1 + FindLongestCommonSubsequence(inputString1, inputString2, length1 - 1, length2 - 1);
             else
-                return GetMax(FindLongestCommonSubsequence(inputString1, inputString2, length1, length2 - 1), FindLongestCommonSubsequence(inputString1, inputString2, length1 - 1, length2));
+                return GetMax(FindLongestCommonSubsequence(inputString1, inputString2, length1, length2 - 1), 
+                    FindLongestCommonSubsequence(inputString1, inputString2, length1 - 1, length2));
         }
 
         /* Utility function to get max of 2 integers */
