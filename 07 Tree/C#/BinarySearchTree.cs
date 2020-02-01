@@ -57,7 +57,67 @@ namespace Tree
 
         public void Remove(T val)
         {
-            throw new NotImplementedException();
+            // find
+            Node node = SearchDFS(val);
+
+            // manipulate right if available
+            node = RemoveNode(node);
+            // or manipulate left if available
+            // or just delete
+        }
+
+        private Node RemoveNode(Node node)
+        {
+            if (node.left == null && node.right == null)
+            {
+                node = null;
+                return node;
+            }
+
+            if (node.right != null)
+            {
+                node.data = node.right.data;
+                node.right = RemoveNode(node.right);
+            }
+            else if (node.left != null)
+            {
+                node.data = node.left.data;
+                node.left = RemoveNode(node.left);
+            }
+            else
+            {
+                node = null;
+            }
+
+            return node;
+        }
+
+        private Node SearchDFS(T val)
+        {
+            return SearchDFSUtil(_root, val);
+        }
+
+        private Node SearchDFSUtil(Node root, T val)
+        {
+            if (root == null)
+            {
+                return null;
+            }
+
+            if (0 == root.data.CompareTo(val))
+            {
+                return root;
+            }
+
+            var temp = SearchDFSUtil(root.left, val);
+            if (temp != null)
+                return temp;
+
+            var temp1 = SearchDFSUtil(root.right, val);
+            if (temp1 != null)
+                return temp1;
+
+            return null;
         }
 
         public T Search()

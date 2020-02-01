@@ -5,6 +5,7 @@ using Strings;
 using Etc;
 using System.Text;
 using System.IO;
+using Tree;
 
 namespace Preparation
 {
@@ -75,10 +76,10 @@ namespace Preparation
             //var sw = Stopwatch.StartNew();
             //sw = Stopwatch.StartNew();
             //////////////Write your code here to measure performance////////////
-            Backtrack.NQueen nQueen = new Backtrack.NQueen();
-            int n = 4;
-            int[,] positions = new int[n, n];
-            nQueen.GetQueenPositions(positions, 0);
+            //Backtrack.NQueen nQueen = new Backtrack.NQueen();
+            //int n = 4;
+            //int[,] positions = new int[n, n];
+            //nQueen.GetQueenPositions(positions, 0);
 
             ////for (int i = 0; i < positions.GetLength(0); i++)
             ////{
@@ -111,21 +112,22 @@ namespace Preparation
             //Console.Write(series + ", ");
             //Console.WriteLine("==========Elapsed time=========");
             //Console.WriteLine(sw.Elapsed);
-            //BinarySearchTree<int> myTree = new BinarySearchTree<int>();
-            //myTree.Insert(5);
-            //myTree.Insert(3);
-            //myTree.Insert(9);
-            //myTree.Insert(7);
-            //myTree.Insert(99);
-            //myTree.Insert(1);
+            BinarySearchTree<int> myTree = new BinarySearchTree<int>();
+            myTree.Insert(5);
+            myTree.Insert(3);
+            myTree.Insert(9);
+            myTree.Insert(7);
+            myTree.Insert(99);
+            myTree.Insert(1);
 
-            ////myTree.PrintBFS();
-            ////myTree.PrintDFSPreorder();
-            //myTree.PrintDFSInorder();
-            //myTree.PrintDFSPostOrder();
-            //myTree.LeafNode();
-            //myTree.Edge();
-            //myTree.BFSWithoutRecursion();
+            //myTree.PrintBFS();
+            //myTree.PrintDFSPreorder();
+            myTree.Remove(99);
+            myTree.PrintDFSInorder();
+            myTree.PrintDFSPostOrder();
+            myTree.LeafNode();
+            myTree.Edge();
+            myTree.BFSWithoutRecursion();
         }
     }
 }
