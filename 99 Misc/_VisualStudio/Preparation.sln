@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2005
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Preparation", "Preparation\Preparation.csproj", "{7E00BA14-2AF6-41F4-B61C-BCF7284E73EA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tree", "..\..\07 Tree\C#\Tree.csproj", "{6206F930-9110-468C-9ED4-EA3FB6CF3888}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph", "..\..\08 Graph\C#\Graph.csproj", "{1C4545B0-DB7B-4B93-AB67-F25A86355B3A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicProgramming", "..\..\13 Dynamic\C#\DynamicProgramming.csproj", "{1F238BA6-E076-4569-BF44-9FF1B738E61D}"
 EndProject
@@ -39,6 +41,14 @@ Global
 		{6206F930-9110-468C-9ED4-EA3FB6CF3888}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6206F930-9110-468C-9ED4-EA3FB6CF3888}.Release|x86.ActiveCfg = Release|x86
 		{6206F930-9110-468C-9ED4-EA3FB6CF3888}.Release|x86.Build.0 = Release|x86
+		{1C4545B0-DB7B-4B93-AB67-F25A86355B3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C4545B0-DB7B-4B93-AB67-F25A86355B3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C4545B0-DB7B-4B93-AB67-F25A86355B3A}.Debug|x86.ActiveCfg = Debug|x86
+		{1C4545B0-DB7B-4B93-AB67-F25A86355B3A}.Debug|x86.Build.0 = Debug|x86
+		{1C4545B0-DB7B-4B93-AB67-F25A86355B3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C4545B0-DB7B-4B93-AB67-F25A86355B3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C4545B0-DB7B-4B93-AB67-F25A86355B3A}.Release|x86.ActiveCfg = Release|x86
+		{1C4545B0-DB7B-4B93-AB67-F25A86355B3A}.Release|x86.Build.0 = Release|x86
 		{1F238BA6-E076-4569-BF44-9FF1B738E61D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1F238BA6-E076-4569-BF44-9FF1B738E61D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F238BA6-E076-4569-BF44-9FF1B738E61D}.Debug|x86.ActiveCfg = Debug|x86

@@ -68,6 +68,10 @@
       <Project>{6206f930-9110-468c-9ed4-ea3fb6cf3888}</Project>
       <Name>Tree</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\08 Graph\C#\Graph.csproj">
+      <Project>{1C4545B0-DB7B-4B93-AB67-F25A86355B3A}</Project>
+      <Name>Graph</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\13 Dynamic\C#\DynamicProgramming.csproj">
       <Project>{1f238ba6-e076-4569-bf44-9ff1b738e61d}</Project>
       <Name>DynamicProgramming</Name>
