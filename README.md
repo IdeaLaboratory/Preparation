@@ -11,3 +11,11 @@ We kept on exploring new things, [algorithmica](http://www.algorithmica.co.in/co
 Cleared interviews like Teradata, Teletext, Infosys, CTS, Accenture, Jp morgan, Harman(2x), Siemens(3x), Morgan Stanley, Amazon, Hexagon, Philips, KLA etc..
 
 ###### [`Frequently asked questions in interviews`](/FAQ.md)
+
+
+## .Net DSA CP CheatSheet.
+Compare two dimentional (2D) array, jagged array [ascending]
+```
+  var comparer = Comparer<int>.Default;
+  Array.Sort(boxTypes, (a,b) => comparer.Compare(a[1],b[1]));
+```
