@@ -6,6 +6,8 @@
 *.lo
 *.o
 *.obj
+*.vs
+*.pdb
 
 # Precompiled Headers
 *.gch
@@ -39,6 +41,7 @@
 /99 Misc/_VisualStudio/.vs/Preparation/v15
 /99 Misc/_VisualStudio/Preparation/obj/Debug
 /07 Tree/C#/bin/Debug/Tree.pdb
+/08 Graph/C#/bin/Debug/Graph.pdb
 /99 Misc/_VisualStudio/Preparation/bin/Debug
 /07 Tree/C#/obj/Release
 /13 Dynamic/.vs/DynamicProgramming/v15
@@ -56,3 +59,5 @@ obj
 /99 Misc/_VisualStudio/.vs/Preparation/DesignTimeBuild
 /99 Misc/etc/C#/bin/x86/Debug
 /99 Misc/_VisualStudio/.vs/Preparation/v16
+/99 Misc/_VisualStudio/.vs/Preparation/v17/.suo
+/08 Graph/C#/bin/Debug/Graph.pdb
