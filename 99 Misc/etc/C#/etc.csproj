@@ -60,7 +60,7 @@
     <Compile Include="Arithmetic.cs" />
     <Compile Include="CustomDate.cs" />
     <Compile Include="ILeetcodeProblemsSolutions.cs" />
-    <Compile Include="LeetcodeProblemsSolutions.cs" />
+    <Compile Include="LeetcodeProblemsSolutions.Default.cs" />
     <Compile Include="MaxPower.cs" />
     <Compile Include="Probability.cs" />
     <Compile Include="ProblemSolvingExperience.cs" />

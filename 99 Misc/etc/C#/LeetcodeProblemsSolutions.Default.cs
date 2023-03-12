@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Etc
 {
-    public class LeetcodeProblemsSolutions : ILeetcodeProblemsSolutions
+    public partial class LeetcodeProblemsSolutions : ILeetcodeProblemsSolutions
     {
 
         ///<see cref = "ILeetcodeProblemsSolutions.CountElement" />
